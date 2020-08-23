@@ -1,9 +1,9 @@
 var cmd = require('node-cmd');
-var path, node_ssh, ssh, fs;
+var path, NodeSSH, ssh, fs;
 fs = require('fs');
 path = require('path');
-node_ssh = require('node-ssh');
-ssh = new node_ssh();
+NodeSSH = require('node-ssh');
+ssh = new NodeSSH();
 
 // the method that starts the deployment process
 function main() {
@@ -85,7 +85,7 @@ function sshConnect() {
   ssh
     .connect({
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-      host: '00.00.00.00',
+      host: '35.175.129.183',
       username: 'ubuntu',
       privateKey: 'hs-key.pem'
     })
