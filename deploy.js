@@ -66,7 +66,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'mkdir hackathon-starter && cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
+    'cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
       cwd: '/home/ubuntu'
   });
 }
